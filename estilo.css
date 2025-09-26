@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 5px;
+}
+.container {
+  display: grid;
+  grid-template-areas: "logo header" "nav nav" "aside section" "profesores profesores" "videos videos" "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-gap: 10px;
+  max-width: 1000px;
+  margin: auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.logo {
+  background-color: rgb(255, 255, 255);
+  border:2px solid;
+  cursor: pointer;
+}
+.logo img {
+  max-width: 35%;
+  display: block;
+  margin: 0 auto;
+}
+.header {
+  grid-area: header;
+  background-color: green;
+  padding: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+.nav {
+  grid-area: nav;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+  font-weight: bold;
+}
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+.aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(0, 255, 68);
+  padding: 20px;
+  border: 1.5px solid;
+}
+.aside p {
+    font-weight: bold;
+    text-align: center;
+}
+.aside .btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: white;
+  text-align: center;
+  text-decoration: dashed;
+  font-weight: bold;
+  color: black;
+}
+.aside .btn:hover {
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+  color: white;
+}
+.section {
+    grid-area: section;
+    background-color: rgb(83, 255, 98);
+    padding: 20px;
+}
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contenedor-jugadores {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.jugador img:hover {
+    transform: scale(2);
+    border: 0.2em solid white;
+    cursor: pointer;
+    border-radius:1em;
+}
+
+.jugador {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.jugador img {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.jugadores {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.director1 {
+    background-color: #e4f0dd;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.directorgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.directorgrid .directorinfo {
+    background-color: #e4f0dd;
+    padding: 30px 20px;
+    font-weight: bold;
+    border: 1px solid #000;
+    text-align: center;
+    border-radius: 10px;
+    height: 18em;
+}
+
+.directorgrid .directorlogros {
+    background-color: #c6e2e9;
+    padding: 30px 20px;
+    font-weight: bold;
+    border: 1px solid #0000ff;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.directorTecnico {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.directorTecnico img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.directorTecnico img:hover {
+    transform: scale(1.3);
+    border: 0.2EM;
+    cursor: pointer;
+    border-radius:1em;
+
+}
+.directorinfo {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 100%;
+}
+.directorlogros {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 100%;
+}
+
+.libertadores {
+    width: 100%;
+    height: auto;
+}
+.libertadores:hover {
+  cursor: pointer;
+}
+.reinaldo {
+  width: 100%;
+  height: 10em;
+  margin-top: 9px;
+  background-size: cover;
+  background-position: center;
+}
+.reinaldo:hover {
+  cursor: pointer;
+}
+.videos-explicativos {
+    grid-area: videos;
+    padding: 30px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.videos-explicativos h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.videos-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.video-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 270px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    
+}
+
+.video-card img {
+    width: 100%;
+    height: 150px;
+    object-position: center;
+}
+
+.video-contenido {
+    padding: 15px;
+    text-align: left;
+}
+
+.video-contenido h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.video-contenido p {
+    font-size: 14px;
+    color: #555;
+}
+
+footer.footer {
+    grid-area: footer;
+    background-color: #6b6b74;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-top: 5px solid #fff;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-column .icon {
+    margin-right: 8px;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
